@@ -1,0 +1,18 @@
+{
+  "catagories":{
+    "development":{
+      "description":"everything about development enviroment",
+      "title":"Development",
+      "url":"angular2-guide",
+      "topics":[["Web development",["Javascript","React","Node.js","Css","PHP","Django"]],["Mobile apps",["Andoird apps","IOS apps","ionic"]],"Programming languages","Game Development","Databases","Software testing","Software engineering","DEvelopment tools" ]
+    },
+    "Business":{
+      "description": "All About successful Business",
+      "title": "Business",
+      "url":"business-url",
+      "topics":["Finance","Communications","Managment","Strategy"]
+
+    }
+
+  }
+}
