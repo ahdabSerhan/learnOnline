@@ -1,0 +1,15 @@
+<h1>inside the catagories list</h1>
+<ul>
+<div *ngFor="let catagorey of this.catagories ">
+  <h2>{{catagorey.title}}</h2>
+  <p>{{catagorey.description}}</p>
+  <ul>
+    <h3>Topics</h3>
+      <div *ngFor="let topic of catagorey.topics">
+        <li>{{topic}}</li>
+      </div>
+    </ul>
+  <div><a href="{{catagorey.url}}">Go To Catagorey</a></div>
+
+</div>
+</ul>
