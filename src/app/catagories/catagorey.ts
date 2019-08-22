@@ -1,4 +1,4 @@
-export class Catagorey {
+export interface Catagorey {
   title: string;
   description: string;
   url : string;
