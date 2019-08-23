@@ -1,0 +1,11 @@
+<a href="/">Home Page</a>
+
+<a href="/login">Login</a>
+<a href="/catagories">Catagories</a>
+
+
+<div *ngIf="user">
+  <h3>Hello {{user.displayName}}</h3>
+  <img [src]="user.photoURL">
+  </div>
+  <button (click)="logout()">LogOut</button>

@@ -6,6 +6,6 @@ export interface User{
   role?: Roles;
 }
 export interface Roles{
-subscriber?:boolean;
-admin?:boolean;
+subscriber:boolean;
+admin:boolean;
 }

@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatagoriesListComponent } from './catagories/catagories-list/catagories-list.component';
-import { SignupComponent } from './authentication/signup/signup.component';
-import {LoginComponent} from './authentication/login/login.component';
+import { SignupComponent } from './app-navbar/authentication/signup/signup.component';
+import {LoginComponent} from './app-navbar/authentication/login/login.component';
 
 
 //Services
-import { AuthenticationService } from './authentication/authentication.service';
+import { AuthenticationService } from './app-navbar/authentication/authentication.service';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -17,14 +17,20 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from './../environments/environment';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
-
+//Material Design
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
     CatagoriesListComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    AppNavbarComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,10 @@ import {AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore'
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MaterialModule
+
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

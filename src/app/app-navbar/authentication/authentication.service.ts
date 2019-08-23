@@ -58,9 +58,8 @@ user$:Observable<any>;
       photoURL: user.photoURL,
       role: {
         subscriber : true,
-        admin:false
+        admin:true
       }
-
     }
 
     return  userRef.set(data).catch((err) => {
