@@ -7,6 +7,7 @@ import { CatagoriesListComponent } from './catagories/catagories-list/catagories
 import { SignupComponent } from './app-navbar/authentication/signup/signup.component';
 import {LoginComponent} from './app-navbar/authentication/login/login.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 //Services
 import { AuthenticationService } from './app-navbar/authentication/authentication.service';
@@ -23,6 +24,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 //Material Design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
+import { SearchComponent } from './app-navbar/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import {MaterialModule} from './material.module';
     SignupComponent,
     LoginComponent,
     AppNavbarComponent,
-    HomePageComponent
+    HomePageComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import {MaterialModule} from './material.module';
     AngularFireAuthModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
 
   ],
   providers: [AuthenticationService],

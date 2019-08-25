@@ -16,6 +16,13 @@ export class AppNavbarComponent implements OnInit {
     });
     }
     logout(){
+      console.log("this is logout");
       this.AuthService.logout();
+
     }
+
+
+
+
+
 }
