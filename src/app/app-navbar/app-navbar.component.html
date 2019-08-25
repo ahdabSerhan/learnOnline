@@ -1,11 +1,27 @@
-<a href="/">Home Page</a>
 
-<a href="/login">Login</a>
-<a href="/catagories">Catagories</a>
+<mat-toolbar color="grey">
+    <mat-toolbar-row>
+    <button id= "logo" mat-button routerLink="/"><img src="../../assets/learnOnline.PNG"></button>
+    <button mat-button routerLink="/catagories"><i class="material-icons">view_module</i>
+      Catagories</button>
+      <app-search></app-search>
+      <span class="example-spacer"></span>
+      <div *ngIf="!user">
+
+    <button id="login" mat-button  routerLink="/login"><i class="material-icons">account_circle</i> Login</button>
+      </div>
+    <div *ngIf="user">
+
+        <button id="logout" mat-button (click)="logout()"><img [src]="user.photoURL"></button>
+        </div>
+    <button mat-button routerLink="/signup"><i class="material-icons">person_add</i> SignUp</button>
+
+  </mat-toolbar-row>
+
+  </mat-toolbar>
+
 
 
 <div *ngIf="user">
-  <h3>Hello {{user.displayName}}</h3>
-  <img [src]="user.photoURL">
+
   </div>
-  <button (click)="logout()">LogOut</button>

@@ -14,6 +14,7 @@ export class CatagoriesListComponent implements OnInit {
 
   ngOnInit() {
   this.getCatagories();
+
   }
 
   getCatagories() {
@@ -24,8 +25,9 @@ export class CatagoriesListComponent implements OnInit {
         )
       )
     ).subscribe(catagories => {
+      console.log(catagories);
+
       this.catagories = catagories;
-      console.log("this.catagories ",this.catagories[0])
 
     });
   }
