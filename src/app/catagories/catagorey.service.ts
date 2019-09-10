@@ -15,7 +15,6 @@ export class CatagoreyService {
 
   }
   getCatagoriesList(): AngularFireList<Catagorey> {
-    console.log("inside the service get catagories list",this.catagoreisRef);
     return this.catagoreisRef;
   }
 }

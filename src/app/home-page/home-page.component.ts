@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmbedVideoService } from 'ngx-embed-video';
+import { CatagoreyService } from '../catagories/catagorey.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  youtubeUrl = 'https://www.youtube.com/watch?v=iHhcHTlGtRs';
 
-  ngOnInit() {
+  catagories:any;
+  constructor(private embedService: EmbedVideoService, private catagoriesService:CatagoreyService) {
   }
+  ngOnInit() {
+    this.getCatagories();
+  }
+getCatagories(){
+  this.catagoriesService.getCatagoriesList().snapshotChanges().pipe(
+    map(changes =>
+      changes.map(c =>
+        ({ key: c.payload.key, ...c.payload.val() })
+      )
 
+    )
+  ).subscribe(catagories => {
+    this.catagories = catagories;
+
+  });
+}
 }

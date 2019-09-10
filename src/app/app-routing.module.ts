@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './app-navbar/authentication/login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SignupComponent } from './app-navbar/authentication/signup/signup.component';
+import { CribsComponent } from './cribs/cribs.component';
 
 const routes: Routes = [
   {path:'',component:HomePageComponent},
   {path:'login',component:LoginComponent},
   {path:'signup', component:SignupComponent},
-  {path: 'catagories', component:CatagoriesListComponent}
+  {path: 'catagories', component:CatagoriesListComponent},
+  {path: 'cribs', component:CribsComponent}
 
 ];
 

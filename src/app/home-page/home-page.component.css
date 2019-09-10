@@ -1,0 +1,46 @@
+mat-list{
+  font-family: Bad Script;
+
+background: rgb(230, 226, 226);
+
+}
+
+h1{
+  text-transform: uppercase;
+  color:white;
+  margin: 0;
+  padding:10px 28px;
+  font-weight: normal;
+  margin-left: 20%;
+
+}
+h2{
+  text-transform: uppercase;
+  color:rgb(121, 120, 120);
+  margin: 0;
+  padding:10px 28px;
+  font-weight: normal;
+
+}
+mat-card{
+  display: flex;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(209, 207, 207, 0.2);
+  transition: 0.3s;
+  background-color:rgb(230, 226, 226);;
+  border-radius: 15px;
+}
+mat-card :hover
+   {
+       box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+  }
+
+.view{
+  background-color:rgb(230, 226, 226);;
+
+  width:100%;
+}
+img{
+  width:30%;
+  height: 40%;
+}

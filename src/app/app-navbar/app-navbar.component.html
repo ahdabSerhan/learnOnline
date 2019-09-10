@@ -1,9 +1,17 @@
 
 <mat-toolbar color="grey">
     <mat-toolbar-row>
-    <button id= "logo" mat-button routerLink="/"><img src="../../assets/learnOnline.PNG"></button>
-    <button mat-button routerLink="/catagories"><i class="material-icons">view_module</i>
-      Catagories</button>
+    <button id= "logo" mat-button routerLink="/"><img src="../../assets/learnOnlineLogo.PNG"></button>
+    <div class="dropdown">
+    <button class="dropbtn" mat-button routerLink="/catagories" ><i class="material-icons">view_module</i>
+      Catagories  </button>
+      <div class="dropdown-content">
+
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
       <app-search></app-search>
       <span class="example-spacer"></span>
       <div *ngIf="!user">
@@ -12,7 +20,7 @@
       </div>
     <div *ngIf="user">
 
-        <button id="logout" mat-button (click)="logout()"><img [src]="user.photoURL"></button>
+        <button id="logout" mat-button (click)="logout()"><img [src]="user.photoURL" ></button>
         </div>
     <button mat-button routerLink="/signup"><i class="material-icons">person_add</i> SignUp</button>
 
@@ -25,3 +33,4 @@
 <div *ngIf="user">
 
   </div>
+
