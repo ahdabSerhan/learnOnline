@@ -32,6 +32,7 @@ user$:Observable<any>;
 
 
    }
+
    private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
@@ -49,6 +50,7 @@ user$:Observable<any>;
         console.log(err)
       });
   }
+
    updateUser(user){
      const userRef: AngularFirestoreDocument<any>= this.afs.doc(`users/${user.uid}`);
     const data : User={
@@ -62,15 +64,53 @@ user$:Observable<any>;
       }
     }
 
+
     return  userRef.set(data).catch((err) => {
       userRef.set(data);
       console.log(err);
     });
    }
+   getCurrentUser(){
+    return new Promise<any>((resolve, reject) => {
+      var user = firebase.auth().onAuthStateChanged(function(user){
+        if (user) {
+          resolve(user);
+        } else {
+          reject('No user logged in');
+        }
+      })
+    })
+  }
    getAuth() {
      return this.afAuth.authState;
   }
    logout(){
      this.afAuth.auth.signOut();
    }
+   register(value) {
+    return new Promise<any>((resolve, reject) => {
+      firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
+      .then(res => {
+        resolve(res);
+      }, err => reject(err))
+    })}
+    doLogin(value){
+      return new Promise<any>((resolve, reject) => {
+        firebase.auth().signInWithEmailAndPassword(value.email, value.password)
+        .then(res => {
+          resolve(res);
+        }, err => reject(err))
+      })
+    }
+    doLogout(){
+      return new Promise((resolve, reject) => {
+        if(firebase.auth().currentUser){
+          this.afAuth.auth.signOut();
+          resolve();
+        }
+        else{
+          reject();
+        }
+      });
+    }
 }

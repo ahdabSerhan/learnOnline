@@ -13,6 +13,7 @@ user : User;
 
   ngOnInit() {
     this.AuthService.getAuth().subscribe(user=>{
+      console.log("user ", user);
       this.user=user;
     });
     }

@@ -1,1 +1,28 @@
-<p>home-page works!</p>
+
+
+  <div *ngFor="let catagorey of this.catagories  ">
+      <h2>{{catagorey.title}}</h2>
+      <h2></h2>
+  <mat-divider></mat-divider>
+
+
+
+
+<mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
+    <div *ngFor="let topic of catagorey.topics ">
+
+    <mdb-carousel-item>
+        <div class="view">
+                <mat-card>
+                    <img  src="{{catagorey.img}}" hspace="20" >
+
+                  </mat-card>
+
+        </div>
+    </mdb-carousel-item>
+    </div>
+
+
+</mdb-carousel>
+<mat-divider></mat-divider>
+</div>

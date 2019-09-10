@@ -26,15 +26,12 @@ export class SearchComponent implements OnInit {
   });
 
   stateGroups: StateGroup[] = [{
-    letter: 'A',
-    names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
+    letter: 'Development',
+    names: ['javaScript', 'React', 'Java', 'C++','C#','Ionic','Android']
   }, {
     letter: 'C',
     names: ['California', 'Colorado', 'Connecticut']
-  }, {
-    letter: 'D',
-    names: ['Delaware']
-  }, {
+  },  {
     letter: 'F',
     names: ['Florida']
   }, {

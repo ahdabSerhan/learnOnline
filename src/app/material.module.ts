@@ -8,6 +8,13 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { EmbedVideo } from 'ngx-embed-video';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,14 @@ import {MatInputModule} from '@angular/material';
     MatAutocompleteModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatListModule,
+    MatCardModule,
+    MatSliderModule,
+    MatMenuModule
+
   ],
   exports: [
     MatButtonModule,
@@ -30,7 +44,15 @@ import {MatInputModule} from '@angular/material';
     MatAutocompleteModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatListModule,
+    MatCardModule,
+    MatSliderModule,
+    MatMenuModule
+
+
 
   ]
 
