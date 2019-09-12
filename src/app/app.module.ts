@@ -48,6 +48,7 @@ import { CribsListingComponent } from './cribs/cribs-listing/cribs-listing.compo
     CribsListingComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     // Connecting to Firebase
@@ -63,7 +64,8 @@ import { CribsListingComponent } from './cribs/cribs-listing/cribs-listing.compo
     MDBBootstrapModule.forRoot(),
     CarouselModule,
     WavesModule,
-    SafePipeModule
+    SafePipeModule,
+
 
 
   ],
