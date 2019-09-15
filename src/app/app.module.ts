@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,9 @@ import {MaterialModule} from './material.module';
 import { SearchComponent } from './app-navbar/search/search.component';
 import { CribsComponent } from './cribs/cribs.component';
 import { CribsListingComponent } from './cribs/cribs-listing/cribs-listing.component';
+import { CribCardComponent } from './cribs/crib-card/crib-card.component';
+import { CribsService } from './cribs/cribs.service';
+import { AddCribComponent } from './cribs/add-crib/add-crib.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +49,9 @@ import { CribsListingComponent } from './cribs/cribs-listing/cribs-listing.compo
     HomePageComponent,
     SearchComponent,
     CribsComponent,
-    CribsListingComponent
+    CribsListingComponent,
+    CribCardComponent,
+    AddCribComponent
   ],
   imports: [
 
@@ -65,11 +71,12 @@ import { CribsListingComponent } from './cribs/cribs-listing/cribs-listing.compo
     CarouselModule,
     WavesModule,
     SafePipeModule,
+    FormsModule
 
 
 
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, CribsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
